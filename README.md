@@ -1,2 +1,2 @@
-# ks8-30days-sharing
-This project is for 
+# 前言
+[IThome鐵人賽](https://ithelp.ithome.com.tw/ironman)
