@@ -1,6 +1,6 @@
 FROM node:6.2.2
 WORKDIR /app
-ADD ./app
+ADD . /app
 RUN npm install
 EXPOSE 300
-COM npm start
+CMD npm start

@@ -1,0 +1,609 @@
+$ docker build .
+Sending build context to Docker daemon  4.096kB
+Step 1/6 : FROM node:6.2.2
+ ---> 9121f2a78909
+Step 2/6 : WORKDIR /app
+ ---> 4c4172e12e1f
+Removing intermediate container 6b7ef2962058
+Step 3/6 : ADD . /app
+ ---> c5c69a52fc07
+Step 4/6 : RUN npm install
+ ---> Running in a81f4960c4b8
+npm info it worked if it ends with ok
+npm info using npm@3.9.5
+npm info using node@v6.2.2
+npm info attempt registry request try #1 at 5:30:32 AM
+npm http request GET https://registry.npmjs.org/express
+npm http 200 https://registry.npmjs.org/express
+npm info retry fetch attempt 1 at 5:30:33 AM
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http fetch GET https://registry.npmjs.org/express/-/express-4.16.2.tgz
+npm http fetch 200 https://registry.npmjs.org/express/-/express-4.16.2.tgz
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/accepts
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/array-flatten
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/body-parser
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/content-disposition
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/content-type
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/cookie
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/cookie-signature
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/debug
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/depd
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/encodeurl
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/escape-html
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/etag
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/finalhandler
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/fresh
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/merge-descriptors
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/methods
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/on-finished
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/parseurl
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/path-to-regexp
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/proxy-addr
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/qs
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/range-parser
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/safe-buffer
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/send
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/serve-static
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/setprototypeof
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/statuses
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/type-is
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/utils-merge
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http request GET https://registry.npmjs.org/vary
+npm http 200 https://registry.npmjs.org/accepts
+npm info retry fetch attempt 1 at 5:30:33 AM
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http fetch GET https://registry.npmjs.org/accepts/-/accepts-1.3.4.tgz
+npm http fetch 200 https://registry.npmjs.org/accepts/-/accepts-1.3.4.tgz
+npm http 200 https://registry.npmjs.org/content-type
+npm http 200 https://registry.npmjs.org/escape-html
+npm http 200 https://registry.npmjs.org/cookie-signature
+npm http 200 https://registry.npmjs.org/merge-descriptors
+npm http 200 https://registry.npmjs.org/on-finished
+npm http 200 https://registry.npmjs.org/safe-buffer
+npm http 200 https://registry.npmjs.org/finalhandler
+npm http 200 https://registry.npmjs.org/array-flatten
+npm http 200 https://registry.npmjs.org/encodeurl
+npm http 200 https://registry.npmjs.org/range-parser
+npm http 200 https://registry.npmjs.org/methods
+npm http 200 https://registry.npmjs.org/vary
+npm http 200 https://registry.npmjs.org/utils-merge
+npm http 200 https://registry.npmjs.org/setprototypeof
+npm http 200 https://registry.npmjs.org/content-disposition
+npm http 200 https://registry.npmjs.org/parseurl
+npm http 200 https://registry.npmjs.org/statuses
+npm http 200 https://registry.npmjs.org/depd
+npm http 200 https://registry.npmjs.org/fresh
+npm http 200 https://registry.npmjs.org/etag
+npm http 200 https://registry.npmjs.org/cookie
+npm http 200 https://registry.npmjs.org/proxy-addr
+npm http 200 https://registry.npmjs.org/type-is
+npm http 200 https://registry.npmjs.org/serve-static
+npm http 200 https://registry.npmjs.org/send
+npm http 200 https://registry.npmjs.org/debug
+npm http 200 https://registry.npmjs.org/qs
+npm http 200 https://registry.npmjs.org/path-to-regexp
+npm http 200 https://registry.npmjs.org/body-parser
+npm info retry fetch attempt 1 at 5:30:33 AM
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http fetch GET https://registry.npmjs.org/content-type/-/content-type-1.0.4.tgz
+npm info retry fetch attempt 1 at 5:30:33 AM
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http fetch GET https://registry.npmjs.org/escape-html/-/escape-html-1.0.3.tgz
+npm info retry fetch attempt 1 at 5:30:33 AM
+npm info attempt registry request try #1 at 5:30:33 AM
+npm http fetch GET https://registry.npmjs.org/cookie-signature/-/cookie-signature-1.0.6.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/merge-descriptors/-/merge-descriptors-1.0.1.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/on-finished/-/on-finished-2.3.0.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.1.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/finalhandler/-/finalhandler-1.1.0.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/array-flatten/-/array-flatten-1.1.1.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/encodeurl/-/encodeurl-1.0.1.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/range-parser/-/range-parser-1.2.0.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/methods/-/methods-1.1.2.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/vary/-/vary-1.1.2.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.1.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/setprototypeof/-/setprototypeof-1.1.0.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/content-disposition/-/content-disposition-0.5.2.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/parseurl/-/parseurl-1.3.2.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/statuses/-/statuses-1.3.1.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/depd/-/depd-1.1.1.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/fresh/-/fresh-0.5.2.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/etag/-/etag-1.8.1.tgz
+npm http fetch 200 https://registry.npmjs.org/on-finished/-/on-finished-2.3.0.tgz
+npm http fetch 200 https://registry.npmjs.org/merge-descriptors/-/merge-descriptors-1.0.1.tgz
+npm http fetch 200 https://registry.npmjs.org/escape-html/-/escape-html-1.0.3.tgz
+npm http fetch 200 https://registry.npmjs.org/cookie-signature/-/cookie-signature-1.0.6.tgz
+npm http fetch 200 https://registry.npmjs.org/content-type/-/content-type-1.0.4.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/cookie/-/cookie-0.3.1.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/proxy-addr/-/proxy-addr-2.0.2.tgz
+npm http fetch 200 https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.1.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/type-is/-/type-is-1.6.15.tgz
+npm http fetch 200 https://registry.npmjs.org/finalhandler/-/finalhandler-1.1.0.tgz
+npm http fetch 200 https://registry.npmjs.org/encodeurl/-/encodeurl-1.0.1.tgz
+npm http fetch 200 https://registry.npmjs.org/range-parser/-/range-parser-1.2.0.tgz
+npm http fetch 200 https://registry.npmjs.org/methods/-/methods-1.1.2.tgz
+npm http fetch 200 https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.1.tgz
+npm http fetch 200 https://registry.npmjs.org/vary/-/vary-1.1.2.tgz
+npm http fetch 200 https://registry.npmjs.org/array-flatten/-/array-flatten-1.1.1.tgz
+npm http fetch 200 https://registry.npmjs.org/setprototypeof/-/setprototypeof-1.1.0.tgz
+npm http fetch 200 https://registry.npmjs.org/content-disposition/-/content-disposition-0.5.2.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/serve-static/-/serve-static-1.13.1.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/send/-/send-0.16.1.tgz
+npm http fetch 200 https://registry.npmjs.org/fresh/-/fresh-0.5.2.tgz
+npm http fetch 200 https://registry.npmjs.org/depd/-/depd-1.1.1.tgz
+npm http fetch 200 https://registry.npmjs.org/parseurl/-/parseurl-1.3.2.tgz
+npm http fetch 200 https://registry.npmjs.org/etag/-/etag-1.8.1.tgz
+npm http fetch 200 https://registry.npmjs.org/statuses/-/statuses-1.3.1.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/debug/-/debug-2.6.9.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/qs/-/qs-6.5.1.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-0.1.7.tgz
+npm http fetch 200 https://registry.npmjs.org/proxy-addr/-/proxy-addr-2.0.2.tgz
+npm http fetch 200 https://registry.npmjs.org/cookie/-/cookie-0.3.1.tgz
+npm http fetch 200 https://registry.npmjs.org/type-is/-/type-is-1.6.15.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/body-parser/-/body-parser-1.18.2.tgz
+npm http fetch 200 https://registry.npmjs.org/serve-static/-/serve-static-1.13.1.tgz
+npm http fetch 200 https://registry.npmjs.org/send/-/send-0.16.1.tgz
+npm http fetch 200 https://registry.npmjs.org/debug/-/debug-2.6.9.tgz
+npm http fetch 200 https://registry.npmjs.org/qs/-/qs-6.5.1.tgz
+npm http fetch 200 https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-0.1.7.tgz
+npm http fetch 200 https://registry.npmjs.org/body-parser/-/body-parser-1.18.2.tgz
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http request GET https://registry.npmjs.org/mime-types
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http request GET https://registry.npmjs.org/negotiator
+npm http 200 https://registry.npmjs.org/negotiator
+npm http 200 https://registry.npmjs.org/mime-types
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/negotiator/-/negotiator-0.6.1.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/mime-types/-/mime-types-2.1.17.tgz
+npm http fetch 200 https://registry.npmjs.org/negotiator/-/negotiator-0.6.1.tgz
+npm http fetch 200 https://registry.npmjs.org/mime-types/-/mime-types-2.1.17.tgz
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http request GET https://registry.npmjs.org/mime-db
+npm http 200 https://registry.npmjs.org/mime-db
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/mime-db/-/mime-db-1.30.0.tgz
+npm http fetch 200 https://registry.npmjs.org/mime-db/-/mime-db-1.30.0.tgz
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http request GET https://registry.npmjs.org/bytes
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http request GET https://registry.npmjs.org/http-errors
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http request GET https://registry.npmjs.org/iconv-lite
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http request GET https://registry.npmjs.org/raw-body
+npm http 200 https://registry.npmjs.org/bytes
+npm http 200 https://registry.npmjs.org/http-errors
+npm http 200 https://registry.npmjs.org/raw-body
+npm http 200 https://registry.npmjs.org/iconv-lite
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/bytes/-/bytes-3.0.0.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/http-errors/-/http-errors-1.6.2.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/raw-body/-/raw-body-2.3.2.tgz
+npm info retry fetch attempt 1 at 5:30:34 AM
+npm info attempt registry request try #1 at 5:30:34 AM
+npm http fetch GET https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.19.tgz
+npm http fetch 200 https://registry.npmjs.org/bytes/-/bytes-3.0.0.tgz
+npm http fetch 200 https://registry.npmjs.org/http-errors/-/http-errors-1.6.2.tgz
+npm http fetch 200 https://registry.npmjs.org/raw-body/-/raw-body-2.3.2.tgz
+npm http fetch 200 https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.19.tgz
+npm info attempt registry request try #1 at 5:30:35 AM
+npm http request GET https://registry.npmjs.org/ms
+npm http 200 https://registry.npmjs.org/ms
+npm info retry fetch attempt 1 at 5:30:35 AM
+npm info attempt registry request try #1 at 5:30:35 AM
+npm http fetch GET https://registry.npmjs.org/ms/-/ms-2.0.0.tgz
+npm http fetch 200 https://registry.npmjs.org/ms/-/ms-2.0.0.tgz
+npm info attempt registry request try #1 at 5:30:35 AM
+npm http request GET https://registry.npmjs.org/inherits
+npm info retry fetch attempt 1 at 5:30:35 AM
+npm info attempt registry request try #1 at 5:30:35 AM
+npm http fetch GET https://registry.npmjs.org/setprototypeof/-/setprototypeof-1.0.3.tgz
+npm http 200 https://registry.npmjs.org/inherits
+npm info retry fetch attempt 1 at 5:30:35 AM
+npm info attempt registry request try #1 at 5:30:35 AM
+npm http fetch GET https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz
+npm http fetch 200 https://registry.npmjs.org/setprototypeof/-/setprototypeof-1.0.3.tgz
+npm http fetch 200 https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz
+npm info attempt registry request try #1 at 5:30:35 AM
+npm http request GET https://registry.npmjs.org/ee-first
+npm http 200 https://registry.npmjs.org/ee-first
+npm info retry fetch attempt 1 at 5:30:35 AM
+npm info attempt registry request try #1 at 5:30:35 AM
+npm http fetch GET https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz
+npm http fetch 200 https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz
+npm info attempt registry request try #1 at 5:30:35 AM
+npm http request GET https://registry.npmjs.org/unpipe
+npm http 200 https://registry.npmjs.org/unpipe
+npm info retry fetch attempt 1 at 5:30:35 AM
+npm info attempt registry request try #1 at 5:30:35 AM
+npm http fetch GET https://registry.npmjs.org/unpipe/-/unpipe-1.0.0.tgz
+npm http fetch 200 https://registry.npmjs.org/unpipe/-/unpipe-1.0.0.tgz
+npm info attempt registry request try #1 at 5:30:35 AM
+npm http request GET https://registry.npmjs.org/media-typer
+npm http 200 https://registry.npmjs.org/media-typer
+npm info retry fetch attempt 1 at 5:30:35 AM
+npm info attempt registry request try #1 at 5:30:35 AM
+npm http fetch GET https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tgz
+npm http fetch 200 https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tgz
+npm info attempt registry request try #1 at 5:30:35 AM
+npm http request GET https://registry.npmjs.org/forwarded
+npm info attempt registry request try #1 at 5:30:35 AM
+npm http request GET https://registry.npmjs.org/ipaddr.js
+npm http 200 https://registry.npmjs.org/forwarded
+npm http 200 https://registry.npmjs.org/ipaddr.js
+npm info retry fetch attempt 1 at 5:30:35 AM
+npm info attempt registry request try #1 at 5:30:35 AM
+npm http fetch GET https://registry.npmjs.org/forwarded/-/forwarded-0.1.2.tgz
+npm info retry fetch attempt 1 at 5:30:35 AM
+npm info attempt registry request try #1 at 5:30:35 AM
+npm http fetch GET https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-1.5.2.tgz
+npm http fetch 200 https://registry.npmjs.org/forwarded/-/forwarded-0.1.2.tgz
+npm http fetch 200 https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-1.5.2.tgz
+npm info attempt registry request try #1 at 5:30:35 AM
+npm http request GET https://registry.npmjs.org/destroy
+npm info attempt registry request try #1 at 5:30:35 AM
+npm http request GET https://registry.npmjs.org/mime
+npm http 200 https://registry.npmjs.org/mime
+npm http 200 https://registry.npmjs.org/destroy
+npm info retry fetch attempt 1 at 5:30:36 AM
+npm info attempt registry request try #1 at 5:30:36 AM
+npm http fetch GET https://registry.npmjs.org/mime/-/mime-1.4.1.tgz
+npm info retry fetch attempt 1 at 5:30:36 AM
+npm info attempt registry request try #1 at 5:30:36 AM
+npm http fetch GET https://registry.npmjs.org/destroy/-/destroy-1.0.4.tgz
+npm http fetch 200 https://registry.npmjs.org/destroy/-/destroy-1.0.4.tgz
+npm http fetch 200 https://registry.npmjs.org/mime/-/mime-1.4.1.tgz
+npm info lifecycle array-flatten@1.1.1~preinstall: array-flatten@1.1.1
+npm info lifecycle bytes@3.0.0~preinstall: bytes@3.0.0
+npm info lifecycle content-disposition@0.5.2~preinstall: content-disposition@0.5.2
+npm info lifecycle content-type@1.0.4~preinstall: content-type@1.0.4
+npm info lifecycle cookie@0.3.1~preinstall: cookie@0.3.1
+npm info lifecycle cookie-signature@1.0.6~preinstall: cookie-signature@1.0.6
+npm info lifecycle depd@1.1.1~preinstall: depd@1.1.1
+npm info lifecycle destroy@1.0.4~preinstall: destroy@1.0.4
+npm info lifecycle ee-first@1.1.1~preinstall: ee-first@1.1.1
+npm info lifecycle encodeurl@1.0.1~preinstall: encodeurl@1.0.1
+npm info lifecycle escape-html@1.0.3~preinstall: escape-html@1.0.3
+npm info lifecycle etag@1.8.1~preinstall: etag@1.8.1
+npm info lifecycle forwarded@0.1.2~preinstall: forwarded@0.1.2
+npm info lifecycle fresh@0.5.2~preinstall: fresh@0.5.2
+npm info lifecycle setprototypeof@1.0.3~preinstall: setprototypeof@1.0.3
+npm info lifecycle iconv-lite@0.4.19~preinstall: iconv-lite@0.4.19
+npm info lifecycle inherits@2.0.3~preinstall: inherits@2.0.3
+npm info lifecycle ipaddr.js@1.5.2~preinstall: ipaddr.js@1.5.2
+npm info lifecycle media-typer@0.3.0~preinstall: media-typer@0.3.0
+npm info lifecycle merge-descriptors@1.0.1~preinstall: merge-descriptors@1.0.1
+npm info lifecycle methods@1.1.2~preinstall: methods@1.1.2
+npm info lifecycle mime@1.4.1~preinstall: mime@1.4.1
+npm info lifecycle mime-db@1.30.0~preinstall: mime-db@1.30.0
+npm info lifecycle mime-types@2.1.17~preinstall: mime-types@2.1.17
+npm info lifecycle ms@2.0.0~preinstall: ms@2.0.0
+npm info lifecycle debug@2.6.9~preinstall: debug@2.6.9
+npm info lifecycle negotiator@0.6.1~preinstall: negotiator@0.6.1
+npm info lifecycle accepts@1.3.4~preinstall: accepts@1.3.4
+npm info lifecycle on-finished@2.3.0~preinstall: on-finished@2.3.0
+npm info lifecycle parseurl@1.3.2~preinstall: parseurl@1.3.2
+npm info lifecycle path-to-regexp@0.1.7~preinstall: path-to-regexp@0.1.7
+npm info lifecycle proxy-addr@2.0.2~preinstall: proxy-addr@2.0.2
+npm info lifecycle qs@6.5.1~preinstall: qs@6.5.1
+npm info lifecycle range-parser@1.2.0~preinstall: range-parser@1.2.0
+npm info lifecycle safe-buffer@5.1.1~preinstall: safe-buffer@5.1.1
+npm info lifecycle setprototypeof@1.1.0~preinstall: setprototypeof@1.1.0
+npm info lifecycle statuses@1.3.1~preinstall: statuses@1.3.1
+npm info lifecycle http-errors@1.6.2~preinstall: http-errors@1.6.2
+npm info lifecycle send@0.16.1~preinstall: send@0.16.1
+npm info lifecycle serve-static@1.13.1~preinstall: serve-static@1.13.1
+npm info lifecycle type-is@1.6.15~preinstall: type-is@1.6.15
+npm info lifecycle unpipe@1.0.0~preinstall: unpipe@1.0.0
+npm info lifecycle raw-body@2.3.2~preinstall: raw-body@2.3.2
+npm info lifecycle body-parser@1.18.2~preinstall: body-parser@1.18.2
+npm info lifecycle finalhandler@1.1.0~preinstall: finalhandler@1.1.0
+npm info lifecycle utils-merge@1.0.1~preinstall: utils-merge@1.0.1
+npm info lifecycle vary@1.1.2~preinstall: vary@1.1.2
+npm info lifecycle express@4.16.2~preinstall: express@4.16.2
+npm info linkStuff array-flatten@1.1.1
+npm info linkStuff bytes@3.0.0
+npm info linkStuff content-disposition@0.5.2
+npm info linkStuff content-type@1.0.4
+npm info linkStuff cookie@0.3.1
+npm info linkStuff cookie-signature@1.0.6
+npm info linkStuff depd@1.1.1
+npm info linkStuff destroy@1.0.4
+npm info linkStuff ee-first@1.1.1
+npm info linkStuff encodeurl@1.0.1
+npm info linkStuff escape-html@1.0.3
+npm info linkStuff etag@1.8.1
+npm info linkStuff forwarded@0.1.2
+npm info linkStuff fresh@0.5.2
+npm info linkStuff setprototypeof@1.0.3
+npm info linkStuff iconv-lite@0.4.19
+npm info linkStuff inherits@2.0.3
+npm info linkStuff ipaddr.js@1.5.2
+npm info linkStuff media-typer@0.3.0
+npm info linkStuff merge-descriptors@1.0.1
+npm info linkStuff methods@1.1.2
+npm info linkStuff mime@1.4.1
+npm info linkStuff mime-db@1.30.0
+npm info linkStuff mime-types@2.1.17
+npm info linkStuff ms@2.0.0
+npm info linkStuff debug@2.6.9
+npm info linkStuff negotiator@0.6.1
+npm info linkStuff accepts@1.3.4
+npm info linkStuff on-finished@2.3.0
+npm info linkStuff parseurl@1.3.2
+npm info linkStuff path-to-regexp@0.1.7
+npm info linkStuff proxy-addr@2.0.2
+npm info linkStuff qs@6.5.1
+npm info linkStuff range-parser@1.2.0
+npm info linkStuff safe-buffer@5.1.1
+npm info linkStuff setprototypeof@1.1.0
+npm info linkStuff statuses@1.3.1
+npm info linkStuff http-errors@1.6.2
+npm info linkStuff send@0.16.1
+npm info linkStuff serve-static@1.13.1
+npm info linkStuff type-is@1.6.15
+npm info linkStuff unpipe@1.0.0
+npm info linkStuff raw-body@2.3.2
+npm info linkStuff body-parser@1.18.2
+npm info linkStuff finalhandler@1.1.0
+npm info linkStuff utils-merge@1.0.1
+npm info linkStuff vary@1.1.2
+npm info linkStuff express@4.16.2
+npm info lifecycle array-flatten@1.1.1~install: array-flatten@1.1.1
+npm info lifecycle bytes@3.0.0~install: bytes@3.0.0
+npm info lifecycle content-disposition@0.5.2~install: content-disposition@0.5.2
+npm info lifecycle content-type@1.0.4~install: content-type@1.0.4
+npm info lifecycle cookie@0.3.1~install: cookie@0.3.1
+npm info lifecycle cookie-signature@1.0.6~install: cookie-signature@1.0.6
+npm info lifecycle depd@1.1.1~install: depd@1.1.1
+npm info lifecycle destroy@1.0.4~install: destroy@1.0.4
+npm info lifecycle ee-first@1.1.1~install: ee-first@1.1.1
+npm info lifecycle encodeurl@1.0.1~install: encodeurl@1.0.1
+npm info lifecycle escape-html@1.0.3~install: escape-html@1.0.3
+npm info lifecycle etag@1.8.1~install: etag@1.8.1
+npm info lifecycle forwarded@0.1.2~install: forwarded@0.1.2
+npm info lifecycle fresh@0.5.2~install: fresh@0.5.2
+npm info lifecycle setprototypeof@1.0.3~install: setprototypeof@1.0.3
+npm info lifecycle iconv-lite@0.4.19~install: iconv-lite@0.4.19
+npm info lifecycle inherits@2.0.3~install: inherits@2.0.3
+npm info lifecycle ipaddr.js@1.5.2~install: ipaddr.js@1.5.2
+npm info lifecycle media-typer@0.3.0~install: media-typer@0.3.0
+npm info lifecycle merge-descriptors@1.0.1~install: merge-descriptors@1.0.1
+npm info lifecycle methods@1.1.2~install: methods@1.1.2
+npm info lifecycle mime@1.4.1~install: mime@1.4.1
+npm info lifecycle mime-db@1.30.0~install: mime-db@1.30.0
+npm info lifecycle mime-types@2.1.17~install: mime-types@2.1.17
+npm info lifecycle ms@2.0.0~install: ms@2.0.0
+npm info lifecycle debug@2.6.9~install: debug@2.6.9
+npm info lifecycle negotiator@0.6.1~install: negotiator@0.6.1
+npm info lifecycle accepts@1.3.4~install: accepts@1.3.4
+npm info lifecycle on-finished@2.3.0~install: on-finished@2.3.0
+npm info lifecycle parseurl@1.3.2~install: parseurl@1.3.2
+npm info lifecycle path-to-regexp@0.1.7~install: path-to-regexp@0.1.7
+npm info lifecycle proxy-addr@2.0.2~install: proxy-addr@2.0.2
+npm info lifecycle qs@6.5.1~install: qs@6.5.1
+npm info lifecycle range-parser@1.2.0~install: range-parser@1.2.0
+npm info lifecycle safe-buffer@5.1.1~install: safe-buffer@5.1.1
+npm info lifecycle setprototypeof@1.1.0~install: setprototypeof@1.1.0
+npm info lifecycle statuses@1.3.1~install: statuses@1.3.1
+npm info lifecycle http-errors@1.6.2~install: http-errors@1.6.2
+npm info lifecycle send@0.16.1~install: send@0.16.1
+npm info lifecycle serve-static@1.13.1~install: serve-static@1.13.1
+npm info lifecycle type-is@1.6.15~install: type-is@1.6.15
+npm info lifecycle unpipe@1.0.0~install: unpipe@1.0.0
+npm info lifecycle raw-body@2.3.2~install: raw-body@2.3.2
+npm info lifecycle body-parser@1.18.2~install: body-parser@1.18.2
+npm info lifecycle finalhandler@1.1.0~install: finalhandler@1.1.0
+npm info lifecycle utils-merge@1.0.1~install: utils-merge@1.0.1
+npm info lifecycle vary@1.1.2~install: vary@1.1.2
+npm info lifecycle express@4.16.2~install: express@4.16.2
+npm info lifecycle array-flatten@1.1.1~postinstall: array-flatten@1.1.1
+npm info lifecycle bytes@3.0.0~postinstall: bytes@3.0.0
+npm info lifecycle content-disposition@0.5.2~postinstall: content-disposition@0.5.2
+npm info lifecycle content-type@1.0.4~postinstall: content-type@1.0.4
+npm info lifecycle cookie@0.3.1~postinstall: cookie@0.3.1
+npm info lifecycle cookie-signature@1.0.6~postinstall: cookie-signature@1.0.6
+npm info lifecycle depd@1.1.1~postinstall: depd@1.1.1
+npm info lifecycle destroy@1.0.4~postinstall: destroy@1.0.4
+npm info lifecycle ee-first@1.1.1~postinstall: ee-first@1.1.1
+npm info lifecycle encodeurl@1.0.1~postinstall: encodeurl@1.0.1
+npm info lifecycle escape-html@1.0.3~postinstall: escape-html@1.0.3
+npm info lifecycle etag@1.8.1~postinstall: etag@1.8.1
+npm info lifecycle forwarded@0.1.2~postinstall: forwarded@0.1.2
+npm info lifecycle fresh@0.5.2~postinstall: fresh@0.5.2
+npm info lifecycle setprototypeof@1.0.3~postinstall: setprototypeof@1.0.3
+npm info lifecycle iconv-lite@0.4.19~postinstall: iconv-lite@0.4.19
+npm info lifecycle inherits@2.0.3~postinstall: inherits@2.0.3
+npm info lifecycle ipaddr.js@1.5.2~postinstall: ipaddr.js@1.5.2
+npm info lifecycle media-typer@0.3.0~postinstall: media-typer@0.3.0
+npm info lifecycle merge-descriptors@1.0.1~postinstall: merge-descriptors@1.0.1
+npm info lifecycle methods@1.1.2~postinstall: methods@1.1.2
+npm info lifecycle mime@1.4.1~postinstall: mime@1.4.1
+npm info lifecycle mime-db@1.30.0~postinstall: mime-db@1.30.0
+npm info lifecycle mime-types@2.1.17~postinstall: mime-types@2.1.17
+npm info lifecycle ms@2.0.0~postinstall: ms@2.0.0
+npm info lifecycle debug@2.6.9~postinstall: debug@2.6.9
+npm info lifecycle negotiator@0.6.1~postinstall: negotiator@0.6.1
+npm info lifecycle accepts@1.3.4~postinstall: accepts@1.3.4
+npm info lifecycle on-finished@2.3.0~postinstall: on-finished@2.3.0
+npm info lifecycle parseurl@1.3.2~postinstall: parseurl@1.3.2
+npm info lifecycle path-to-regexp@0.1.7~postinstall: path-to-regexp@0.1.7
+npm info lifecycle proxy-addr@2.0.2~postinstall: proxy-addr@2.0.2
+npm info lifecycle qs@6.5.1~postinstall: qs@6.5.1
+npm info lifecycle range-parser@1.2.0~postinstall: range-parser@1.2.0
+npm info lifecycle safe-buffer@5.1.1~postinstall: safe-buffer@5.1.1
+npm info lifecycle setprototypeof@1.1.0~postinstall: setprototypeof@1.1.0
+npm info lifecycle statuses@1.3.1~postinstall: statuses@1.3.1
+npm info lifecycle http-errors@1.6.2~postinstall: http-errors@1.6.2
+npm info lifecycle send@0.16.1~postinstall: send@0.16.1
+npm info lifecycle serve-static@1.13.1~postinstall: serve-static@1.13.1
+npm info lifecycle type-is@1.6.15~postinstall: type-is@1.6.15
+npm info lifecycle unpipe@1.0.0~postinstall: unpipe@1.0.0
+npm info lifecycle raw-body@2.3.2~postinstall: raw-body@2.3.2
+npm info lifecycle body-parser@1.18.2~postinstall: body-parser@1.18.2
+npm info lifecycle finalhandler@1.1.0~postinstall: finalhandler@1.1.0
+npm info lifecycle utils-merge@1.0.1~postinstall: utils-merge@1.0.1
+npm info lifecycle vary@1.1.2~postinstall: vary@1.1.2
+npm info lifecycle express@4.16.2~postinstall: express@4.16.2
+npm info lifecycle myapp@1.0.0~preinstall: myapp@1.0.0
+npm info linkStuff myapp@1.0.0
+npm info lifecycle myapp@1.0.0~install: myapp@1.0.0
+npm info lifecycle myapp@1.0.0~postinstall: myapp@1.0.0
+npm info lifecycle myapp@1.0.0~prepublish: myapp@1.0.0
+myapp@1.0.0 /app
+`-- express@4.16.2
+  +-- accepts@1.3.4
+  | +-- mime-types@2.1.17
+  | | `-- mime-db@1.30.0
+  | `-- negotiator@0.6.1
+  +-- array-flatten@1.1.1
+  +-- body-parser@1.18.2
+  | +-- bytes@3.0.0
+  | +-- http-errors@1.6.2
+  | | +-- inherits@2.0.3
+  | | `-- setprototypeof@1.0.3
+  | +-- iconv-lite@0.4.19
+  | `-- raw-body@2.3.2
+  +-- content-disposition@0.5.2
+  +-- content-type@1.0.4
+  +-- cookie@0.3.1
+  +-- cookie-signature@1.0.6
+  +-- debug@2.6.9
+  | `-- ms@2.0.0
+  +-- depd@1.1.1
+  +-- encodeurl@1.0.1
+  +-- escape-html@1.0.3
+  +-- etag@1.8.1
+  +-- finalhandler@1.1.0
+  | `-- unpipe@1.0.0
+  +-- fresh@0.5.2
+  +-- merge-descriptors@1.0.1
+  +-- methods@1.1.2
+  +-- on-finished@2.3.0
+  | `-- ee-first@1.1.1
+  +-- parseurl@1.3.2
+  +-- path-to-regexp@0.1.7
+  +-- proxy-addr@2.0.2
+  | +-- forwarded@0.1.2
+  | `-- ipaddr.js@1.5.2
+  +-- qs@6.5.1
+  +-- range-parser@1.2.0
+  +-- safe-buffer@5.1.1
+  +-- send@0.16.1
+  | +-- destroy@1.0.4
+  | `-- mime@1.4.1
+  +-- serve-static@1.13.1
+  +-- setprototypeof@1.1.0
+  +-- statuses@1.3.1
+  +-- type-is@1.6.15
+  | `-- media-typer@0.3.0
+  +-- utils-merge@1.0.1
+  `-- vary@1.1.2
+
+npm WARN myapp@1.0.0 No description
+npm WARN myapp@1.0.0 No repository field.
+npm WARN myapp@1.0.0 No license field.
+npm info ok
+ ---> d0a79d2cb3e6
+Removing intermediate container a81f4960c4b8
+Step 5/6 : EXPOSE 300
+ ---> Running in 08166b77c638
+ ---> 5eb4fe4bb907
+Removing intermediate container 08166b77c638
+Step 6/6 : CMD npm start
+ ---> Running in 6a13d0cfb687
+ ---> 59f3e3615488
+Removing intermediate container 6a13d0cfb687
+Successfully built 59f3e3615488
