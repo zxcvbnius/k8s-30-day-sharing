@@ -1,0 +1,43 @@
+Name:         my-pod
+Namespace:    default
+Node:         minikube/192.168.99.104
+Start Time:   Fri, 22 Dec 2017 23:29:38 +0800
+Labels:       app=webserver
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.4
+Containers:
+  pod-demo:
+    Container ID:   docker://a537bacb2386277df8ecefc7e1d2e2788092c6bc701df4402ee7a39e3c4c2111
+    Image:          zxcvbnius/docker-demo
+    Image ID:       docker-pullable://zxcvbnius/docker-demo@sha256:a3c6b9ab7356438f873f90c2af170a41cb32cadc01ab3d11f72101daa3abdf18
+    Port:           3000/TCP
+    State:          Running
+      Started:      Fri, 22 Dec 2017 23:29:59 +0800
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-wxjzb (ro)
+Conditions:
+  Type           Status
+  Initialized    True
+  Ready          True
+  PodScheduled   True
+Volumes:
+  default-token-wxjzb:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-wxjzb
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     <none>
+Events:
+  Type    Reason                 Age   From               Message
+  ----    ------                 ----  ----               -------
+  Normal  Scheduled              7m    default-scheduler  Successfully assigned my-pod to minikube
+  Normal  SuccessfulMountVolume  7m    kubelet, minikube  MountVolume.SetUp succeeded for volume "default-token-wxjzb"
+  Normal  Pulling                7m    kubelet, minikube  pulling image "zxcvbnius/docker-demo"
+  Normal  Pulled                 7m    kubelet, minikube  Successfully pulled image "zxcvbnius/docker-demo"
+  Normal  Created                7m    kubelet, minikube  Created container
+  Normal  Started                7m    kubelet, minikube  Started container
