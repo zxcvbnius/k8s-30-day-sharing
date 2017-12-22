@@ -1,3 +1,4 @@
+# kubectl describe pods my-pod
 Name:         my-pod
 Namespace:    default
 Node:         minikube/192.168.99.104
