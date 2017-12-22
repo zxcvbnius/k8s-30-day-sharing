@@ -9,9 +9,9 @@
 
 **介紹與開發環境架設**
 
- - [[Day 1] 介紹Kubernetes是什麼](https://ithelp.ithome.com.tw/articles/10192401)
- - [Day 2] Minikube 安裝與配置
- - [Day 3] 打造你的docker containers
+ - [[[Day 1] 介紹Kubernetes是什麼]](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day01)
+ - [[Day 2] Minikube 安裝與配置](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day02)
+ - [[Day 3] 打造你的docker containers](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day03)
  - [Day 4] 上傳Docker Image到Docker Hub
  - [Day 5] 在Minikube上跑起你的docker containers - Pod
 
