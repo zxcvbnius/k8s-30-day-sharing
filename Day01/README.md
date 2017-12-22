@@ -9,15 +9,16 @@
 
 **介紹與開發環境架設**
 
- - [Day 1] 介紹Kubernetes是什麼
+ - [[Day 1] 介紹Kubernetes是什麼](https://ithelp.ithome.com.tw/articles/10192401)
  - [Day 2] Minikube 安裝與配置
  - [Day 3] 打造你的docker containers
- - [Day 4] 上傳Docker Image到DockerHub
- - [Day 6] 在Minikube上跑起你的docker containers
+ - [Day 4] 上傳Docker Image到Docker Hub
+ - [Day 5] 在Minikube上跑起你的docker containers - Pod
 
 **Kubernetes基礎概念與實作**
 
- - [Day 7] 如何擴張我的pods?! - Pod & Replication Controller
+ - [Day 6] 實際環境運行的Kubernetes - Node
+ - [Day 7] 如何擴張我的pods?! - Replication Controller
  - [Day 8] 還在用Replication Controller嗎？不妨考慮Deployments
  - [Day 9] 如何讓外部服務與pods的溝通管道 - Services
  - [Day 10] Kubernetes世界不可缺少的 - Labels
@@ -51,6 +52,7 @@
 
 
 
+
 # 所以，什麼是Kubernetes
 
 ![Kubernetes](https://kubernetes.io/images/favicon.png)  
@@ -68,6 +70,7 @@
  - 提供機器高度擴張性。Kubernetes cluster可以從一台機器，延展到多台機器共同運行。    
 
 
+
 # 為何使用Kubenetes
 筆者過去曾參與過大型專案開發，上線產品、除錯、與測試功能都包在一起。每次發布新功能、修改代碼都非常膽戰心驚，哪怕是一個bug也會影響整個系統效能。而相較於這樣[單體架構(Monolithic Architecture)](https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/)的服務，[微服務(microservices)架構](https://www.nginx.com/blog/introduction-to-microservices/)大大減少程式複雜度，將每個服務依照各自業務需求獨立出來，以Rest API互相構通。而microservices概念的導入，改善了我們過去所面臨到的問題：
 
@@ -77,6 +80,7 @@
  - 每個服務也可以依照自己的需求，選擇在不同機器上部署
 
 然而，當系統中的微服務越來越多時，管理上也會面臨到很大的挑戰。而Kubenetes的出現，則是幫我們管理這些微服務程式更加方便。
+
 
 
 # Kubernetes的優點
@@ -96,6 +100,7 @@
 
 # Q&A
 筆者也還在學習Kubernetes中，如有對於文章有任何疑問或建議，也歡迎大家留言給我唷^_^
+
 
 
 # 參考連結
