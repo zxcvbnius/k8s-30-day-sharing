@@ -2,7 +2,7 @@
 
 
 # 前言
-在昨天介紹到[如何打造自己的Docker Container](https://ithelp.ithome.com.tw/articles/10192519)之後，今天想分享如何將本機端打造好的Docker Image傳到Docker Registry上。
+在昨天介紹到[如何打造自己的Docker Container](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day03)之後，今天想分享如何將本機端打造好的Docker Image傳到Docker Registry上。
 
 
 
