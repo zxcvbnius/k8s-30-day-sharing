@@ -57,7 +57,7 @@ spec:
 ```
 
  - **apiVersion**  
-   apiVersion是代表目前Kubernetes中相對個元件的版本號。以上述的例子`Pod`是`v1`，而`v1`也是目前Kubernetes中核心的版本號。在日後也會陸續看到`betav1`, `v1alpha1`等版本號，更多Kubernetes API的版本號，可至 [官網 API versioning](https://kubernetes.io/docs/reference/api-overview/#api-versioning)查看。   
+   apiVersion是代表目前Kubernetes中該個元件的版本號。以上述的例子`Pod`是`v1`，而`v1`也是目前Kubernetes中核心的版本號。在日後也會陸續看到`betav1`, `v1alpha1`等版本號，更多Kubernetes API的版本號，可至 [官網 API versioning](https://kubernetes.io/docs/reference/api-overview/#api-versioning)查看。   
 
 
  - **metadata**  
