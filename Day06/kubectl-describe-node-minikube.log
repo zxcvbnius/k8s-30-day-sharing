@@ -1,0 +1,56 @@
+# kubectl describe nodes minikube
+Name:               minikube
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/hostname=minikube
+Annotations:        alpha.kubernetes.io/provided-node-ip=192.168.99.104
+                    node.alpha.kubernetes.io/ttl=0
+                    volumes.kubernetes.io/controller-managed-attach-detach=true
+Taints:             <none>
+CreationTimestamp:  Fri, 22 Dec 2017 23:15:44 +0800
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  Ready            True    Sun, 24 Dec 2017 23:02:06 +0800   Fri, 22 Dec 2017 23:17:55 +0800   KubeletReady                 kubelet is posting ready 
+status
+Addresses:
+  InternalIP:  192.168.99.104
+  Hostname:    minikube
+Capacity:
+ cpu:     2
+ memory:  2048076Ki
+ pods:    110
+Allocatable:
+ cpu:     2
+ memory:  1945676Ki
+ pods:    110
+System Info:
+ Machine ID:                 7445be73f17f455c816b6c472ba8e6f5
+ System UUID:                BAFA65F1-E1C6-47DE-9E0E-66088F5992E4
+ Boot ID:                    a913cdc3-e180-46f4-8ba3-1787a2e3e0a1
+ Kernel Version:             4.9.13
+ OS Image:                   Buildroot 2017.02
+ Operating System:           linux
+ Architecture:               amd64
+ Container Runtime Version:  docker://Unknown
+ Kubelet Version:            v1.8.0
+ Kube-Proxy Version:         v1.8.0
+ExternalID:                  minikube
+Non-terminated Pods:         (6 in total)
+  Namespace                  Name                           CPU Requests  CPU Limits  Memory Requests  Memory Limits
+  ---------                  ----                           ------------  ----------  ---------------  -------------
+  default                    busybox                        0 (0%)        0 (0%)      0 (0%)           0 (0%)
+  default                    my-pod                         0 (0%)        0 (0%)      0 (0%)           0 (0%)
+  kube-system                kube-addon-manager-minikube    5m (0%)       0 (0%)      50Mi (2%)        0 (0%)
+  kube-system                kube-dns-86f6f55dd5-chgjn      260m (13%)    0 (0%)      110Mi (5%)       170Mi (8%)
+  kube-system                kubernetes-dashboard-nhqz8     0 (0%)        0 (0%)      0 (0%)           0 (0%)
+  kube-system                storage-provisioner            0 (0%)        0 (0%)      0 (0%)           0 (0%)
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  CPU Requests  CPU Limits  Memory Requests  Memory Limits
+  ------------  ----------  ---------------  -------------
+  265m (13%)    0 (0%)      160Mi (8%)       170Mi (8%)
+Events:
+  Type     Reason                        Age                 From                  Message
+  ----     ------                        ----                ----                  -------
