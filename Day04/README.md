@@ -2,7 +2,13 @@
 
 
 # 前言
-在昨天介紹到[如何打造自己的Docker Container](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day03)之後，今天想分享如何將本機端打造好的Docker Image傳到Docker Registry上。
+在昨天介紹到[如何打造自己的Docker Container](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day03)之後，想分享如何將本機端打造好的Docker Image傳到Docker Registry上。今天學習筆記可以分成幾個部分：
+
+ - 介紹 什麼是 Docker Registry
+ - 介紹 Docker Hub
+ - 將本機端的Docker Image上傳到Docker Hub
+ - 打造 Docker Image 的一些準則
+ - 常用的 Docker Image
 
 
 
@@ -14,14 +20,7 @@
 
 
 # 什麼是 Docker Registry
-[Docker Registry](https://docs.docker.com/registry/) 就像一個倉庫，裡面存放著各式各樣的Docker Image。倉庫可以是公開的；也可以是私有的，只允許特定人員存取這些Image。Docker官方有提供一個 [Docker Hub Registry](https://hub.docker.com/) ，在上面可以找到需多開源套件官方提供的docker image，而接下來的操作也都會圍繞在Docker Hub上。今天學習筆記可以分成幾個部分：
-
- - 介紹 什麼是 Docker Registry
- - 介紹 Docker Hub
- - 將本機端的Docker Image上傳到Docker Hub
- - 打造 Docker Image 的一些準則
- - 常用的 Docker Image
-
+[Docker Registry](https://docs.docker.com/registry/) 就像一個倉庫，裡面存放著各式各樣的Docker Image。倉庫可以是公開的；也可以是私有的，只允許特定人員存取這些Image。Docker官方有提供一個 [Docker Hub Registry](https://hub.docker.com/) ，在上面可以找到需多開源套件官方提供的docker image，而接下來的操作也都會圍繞在Docker Hub上。
 
 
 
