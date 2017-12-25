@@ -19,7 +19,7 @@
 
 將 [Node](https://kubernetes.io/docs/concepts/architecture/nodes) 加到Kubernetes中之後，Kubernetes會建立一個Node物件，並進行一連串檢查，包含網路連線，Pod是否能被正常啟動等，若都通過則會將該Node物件的狀態設為`Ready`，若是無法通過則會顯示`Not Ready`  
 
-若還是記得 [第二天在本機端架好的minikube](https://ithelp.ithome.com.tw/articles/10192490)，輸入`kubectl get nodes`指令，就可以發現`minikube`已在其中
+若還是記得 [第二天在本機端架好的minikube](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day02)，輸入`kubectl get nodes`指令，就可以發現`minikube`已在其中
 
 ![kubectl-get-nodes](https://github.com/zxcvbnius/k8s-30-day-sharing/blob/master/Day06/kubectl-get-nodes.png?raw=true)
 
