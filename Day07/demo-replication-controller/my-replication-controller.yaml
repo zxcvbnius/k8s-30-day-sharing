@@ -10,6 +10,7 @@ spec:
     metadata:
       labels:
         app: hello-pod-v1
+        version: v1
     spec:
       containers:
       - name: my-pod
