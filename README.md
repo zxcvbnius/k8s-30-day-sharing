@@ -11,11 +11,11 @@
  - [[Day 2] Minikube 安裝與配置](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day02)
  - [[Day 3] 打造你的docker containers](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day03)
  - [[Day 4] 上傳Docker Image到Docker Hub](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day04)
- - [Day 5] 在Minikube上跑起你的docker containers - Pod
+ - [[Day 5] 在Minikube上跑起你的docker containers - Pod](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day05)
 
 **Kubernetes基礎概念與實作**
 
- - [Day 6] 實際環境運行的Kubernetes - Node
+ - [[Day 6] 實際環境運行的Kubernetes - Node](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day06)
  - [Day 7] 如何擴張我的pods?! - Replication Controller
  - [Day 8] 還在用Replication Controller嗎？不妨考慮Deployments
  - [Day 9] 如何讓外部服務與pods的溝通管道 - Services
