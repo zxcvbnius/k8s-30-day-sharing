@@ -1,0 +1,26 @@
+Name:         my-replication-controller
+Namespace:    default
+Selector:     app=hello-pod-v1
+Labels:       app=hello-pod-v1
+              version=v1
+Annotations:  <none>
+Replicas:     4 current / 4 desired
+Pods Status:  4 Running / 0 Waiting / 0 Succeeded / 0 Failed
+Pod Template:
+  Labels:  app=hello-pod-v1
+           version=v1
+  Containers:
+   my-pod:
+    Image:        zxcvbnius/docker-demo
+    Port:         3000/TCP
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Events:
+  Type    Reason            Age   From                    Message
+  ----    ------            ----  ----                    -------
+  Normal  SuccessfulCreate  28m   replication-controller  Created pod: my-replication-controller-gqb89
+  Normal  SuccessfulCreate  28m   replication-controller  Created pod: my-replication-controller-4ftnj
+  Normal  SuccessfulCreate  28m   replication-controller  Created pod: my-replication-controller-wnb5d
+  Normal  SuccessfulCreate  11m   replication-controller  Created pod: my-replication-controller-mzdj8
+  Normal  SuccessfulCreate  1m    replication-controller  Created pod: my-replication-controller-wqpn6
