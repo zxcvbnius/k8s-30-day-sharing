@@ -4,6 +4,9 @@ metadata:
   name: hello-deployment
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: my-deployment
   template:
     metadata:
       labels:
