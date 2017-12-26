@@ -5,7 +5,7 @@
 
 
 # 前言
-在前一天我們 [介紹到Replication Controller](https://ithelp.ithome.com.tw/articles/10193856) 。如果讀者看過 [Replication Controller官方文件](https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/) ，可以看到官方在文件一開頭就表示：
+在前一天我們 [介紹到Replication Controller](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day07) 。如果讀者看過 [Replication Controller官方文件](https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/) ，可以看到官方在文件一開頭就表示：
 
 > NOTE: A Deployment that configures a ReplicaSet is now the recommended way to set up replication.
 
@@ -48,7 +48,7 @@ Kubernetes 官方提供我們 [Deployment](https://kubernetes.io/docs/concepts/w
    而`matchExpressions`的用法較為彈性，每一筆條件主要由三個部分組成`key`, `operator`，`value`。以 [my-replica-sets.yaml](https://github.com/zxcvbnius/k8s-30-day-sharing/blob/master/Day08/demo-deployment/my-replica-sets.yaml) 中敘述為例，我們指定Pod的條件為 1) env必須為dev 2) env不能為prod。而目前`operator`支援4種條件`In`, `NotIn`, `Exists`, 以及 `DoesNotExis`，更多關於`matchExpressions`的運用可以參考 [官方文件](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
 
 
-Replica Set 與昨天提到的Replication Controller 的kubectl指令相似，可以參考 [昨日Replication Controller學習筆記](https://ithelp.ithome.com.tw/articles/10193856)
+Replica Set 與昨天提到的Replication Controller 的kubectl指令相似，可以參考 [昨日Replication Controller學習筆記](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day07)
 
 而在 [Kubernetes官方文件](https://kubernetes.io) 中也提到，雖然Replica Set提供更彈性的selector，並不推薦開發者直接使用`kubectl create`等指令創建Replica Set 物件，而是透過 [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) 來創建新的 Replica Set。
 
