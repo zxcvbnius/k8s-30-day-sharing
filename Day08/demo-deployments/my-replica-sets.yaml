@@ -1,0 +1,24 @@
+apiVersion: apps/v1beta2 # for versions before 1.9.0 use apps/v1beta2
+kind: ReplicaSet
+metadata:
+  name: my-replica-set
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      env: dev
+    matchExpressions:
+      - {key: env, operator: In, values: [dev]}
+      - {key: env, operator: NotIn, values: [prod]}
+  template:
+    metadata:
+      labels:
+        app: hello-pod-v1
+        env: dev
+        version: v1
+    spec:
+      containers:
+      - name: my-pod
+        image: zxcvbnius/docker-demo
+        ports:
+        - containerPort: 3000
