@@ -16,7 +16,7 @@
 **Kubernetes基礎概念與實作**
 
  - [[Day 6] 實際環境運行的Kubernetes - Node](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day06)
- - [Day 7] 如何擴張我的pods?! - Replication Controller
+ - [[Day 7] 如何擴張我的pods?! - Replication Controller](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day07)
  - [Day 8] 還在用Replication Controller嗎？不妨考慮Deployments
  - [Day 9] 如何讓外部服務與pods的溝通管道 - Services
  - [Day 10] Kubernetes世界不可缺少的 - Labels
