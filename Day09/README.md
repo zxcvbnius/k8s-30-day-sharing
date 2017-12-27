@@ -40,7 +40,7 @@
 
 # 實作：透過 kubectl 操作 Service 物件
 
-若是還記得[昨天透過 **kubectl expose** 的指令，為我們創建的 Service 物件](https://ithelp.ithome.com.tw/articles/10194152)嗎？
+若是還記得[昨天透過 **kubectl expose** 的指令，為我們創建的 Service 物件](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day08)嗎？
 
 ```
 $ kubectl expose deploy hello-deployment --type=NodePort --name=my-deployment-service
@@ -129,7 +129,7 @@ service "hello-service" created
 
 ![kubectl-get-service](https://github.com/zxcvbnius/k8s-30-day-sharing/blob/master/Day09/kubectl-get-service.png?raw=true)  
 
-可以看到我們創建的`hello-service`物件，被賦予一組Cluster IP `10.111.116.249`，這時可以使用 [第五天學習筆記分享的alpine](https://ithelp.ithome.com.tw/articles/10193232) 來查看 Service在Cluster中是否正常運作，使用指令如下：
+可以看到我們創建的`hello-service`物件，被賦予一組Cluster IP `10.111.116.249`，這時可以使用 [第五天學習筆記分享的alpine](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day05) 來查看 Service在Cluster中是否正常運作，使用指令如下：
 
 ```
 $ kubectl run -i --tty alpine --image=alpine --restart=Never -- sh
