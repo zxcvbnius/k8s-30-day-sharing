@@ -27,7 +27,7 @@
 
 **Kubernetes進階概念與實作**
 
- - [Day 15] 介紹kops
+ - [Day 15] 介紹kops - 在AWS 上打造Kubernetes Cluster
  - [Day 16] 打造多台機器的cluster - Node Controller
  - [Day 17] Pod之間是如何找到彼此呢 - Service Discovery
  - [Day 18] 把環境參數帶入Kubernetes - ConfigMap
