@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+  labels:
+    app: webserver
+    tier: backend
+  annotations:
+    version: latest
+    release_date: 2017/12/28
+    contact: zxcvbnius@gmail.com
+spec:
+  containers:
+  - name: pod-demo
+    image: zxcvbnius/docker-demo
+    ports:
+    - containerPort: 3000
