@@ -18,8 +18,8 @@
  - [[Day 6] 實際環境運行的Kubernetes - Node](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day06)
  - [[Day 7] 如何擴張我的pods?! - Replication Controller](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day07)
  - [[Day 8] 還在用Replication Controller嗎？不妨考慮Deployments](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day08)
- - [Day 9] 如何讓外部服務與pods的溝通管道 - Services
- - [Day 10] Kubernetes世界不可缺少的 - Labels
+ - [[Day 9] 如何讓外部服務與pods的溝通管道 - Services](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day09)
+ - [[Day 10] Kubernetes世界不可缺少的 - Labels](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day10)
  - [Day 11] 如何確保我的程式還在運行 - Healthchecks
  - [Day 12] 敏感的資料怎麼存在k8s?! - Secrets
  - [Day 13] Demo: 架設stateless Wordpress在Kubernetes
