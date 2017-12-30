@@ -1,0 +1,30 @@
+apiVersion: apps/v1beta2 # for kubectl versions >= 1.9.0 use apps/v1
+kind: Deployment
+metadata:
+  name: hello-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-deployment
+  template:
+    metadata:
+      labels:
+        app: my-deployment
+    spec:
+      containers:
+      - name: webapp
+        image: zxcvbnius/docker-demo:latest
+        ports:
+        - name: webapp-port
+          containerPort: 3000
+        livenessProbe:
+          httpGet:
+            path: /
+            port: webapp-port
+          initialDelaySeconds: 15
+          periodSeconds: 15
+          timeoutSeconds: 30  
+          successThreshold: 1
+          failureThreshold: 3
+
