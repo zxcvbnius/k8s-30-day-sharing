@@ -1,13 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: my-pod
+  name: hello-pod
   labels:
     app: webserver
     tier: backend
 spec:
   containers:
-  - name: pod-demo
+  - name: webapp
     image: zxcvbnius/docker-demo
     ports:
     - containerPort: 3000
+
