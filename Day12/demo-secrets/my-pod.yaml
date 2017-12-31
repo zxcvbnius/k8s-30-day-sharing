@@ -11,7 +11,7 @@ spec:
     ports:
     - containerPort: 3000
     env:
-    - name: SECRECT_USERNAME
+    - name: SECRET_USERNAME
       valueFrom:
         secretKeyRef:
           name: demo-secret-from-yaml
