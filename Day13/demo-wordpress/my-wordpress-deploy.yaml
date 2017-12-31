@@ -1,0 +1,40 @@
+apiVersion: apps/v1beta2 
+kind: Deployment
+metadata:
+  name: wordpress-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-deployment
+  template:
+    metadata:
+      labels:
+        app: my-deployment
+    spec:
+      containers:
+      - name: wordpress
+        image: wordpress:php7.1-fpm-alpine
+        ports:
+        - name: wordpress-port
+          containerPort: 80
+        env:
+        - name: WORDPRESS_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: wordpress-secret
+              key: db-password
+        - name: WORDPRESS_DB_HOST
+          value: 127.0.0.1
+      - name: mysql
+        image: mysql:5.7
+        ports: 
+        - name: mysql-port
+          containerPort: 3306
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: wordpress-secret
+              key: db-password
+          
