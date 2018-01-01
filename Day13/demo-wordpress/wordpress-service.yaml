@@ -5,10 +5,9 @@ metadata:
 spec:
   ports:
   - port: 3000
-    nodePort: 30390
+    nodePort: 30300
     protocol: TCP
-    targetPort: 80
+    targetPort: wordpress-port
   selector:
     app: wordpress-deployment
   type: NodePort
-

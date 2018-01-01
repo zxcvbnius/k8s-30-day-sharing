@@ -1,20 +1,20 @@
 apiVersion: apps/v1beta2 
 kind: Deployment
 metadata:
-  name: wordpress-deployment
+  name: wordpress-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-deployment
+      app: wordpress-deployment
   template:
     metadata:
       labels:
-        app: my-deployment
+        app: wordpress-deployment
     spec:
       containers:
       - name: wordpress
-        image: wordpress:php7.1-fpm-alpine
+        image: wordpress:4-php7.0
         ports:
         - name: wordpress-port
           containerPort: 80
