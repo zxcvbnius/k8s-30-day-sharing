@@ -1,0 +1,325 @@
+I0103 22:21:35.147393    2592 create_cluster.go:439] Inferred --cloud=aws from zone "us-west-2a"
+I0103 22:21:35.148019    2592 create_cluster.go:971] Using SSH public key: /home/ubuntu/.ssh/id_rsa.pub
+I0103 22:21:37.668789    2592 subnets.go:184] Assigned CIDR 172.20.32.0/19 to subnet us-west-2a
+Previewing changes that will be made:
+
+I0103 22:21:44.860835    2592 executor.go:91] Tasks: 0 done / 73 total; 31 can run
+I0103 22:21:46.142449    2592 executor.go:91] Tasks: 31 done / 73 total; 24 can run
+I0103 22:21:47.169266    2592 executor.go:91] Tasks: 55 done / 73 total; 16 can run
+I0103 22:21:48.186186    2592 executor.go:91] Tasks: 71 done / 73 total; 2 can run
+I0103 22:21:48.415180    2592 executor.go:91] Tasks: 73 done / 73 total; 0 can run
+Will create resources:
+  AutoscalingGroup/master-us-west-2a.masters.k8sdemo.zxcvbnius.com
+  	MinSize             	1
+  	MaxSize             	1
+  	Subnets             	[name:us-west-2a.k8sdemo.zxcvbnius.com]
+  	Tags                	{k8s.io/cluster-autoscaler/node-template/label/kops.k8s.io/instancegroup: master-us-west-2a, k8s.io/role/master: 1, Name: master-us-west-2a.masters.k8sdemo.zxcvbnius.com, KubernetesCluster: k8sdemo.zxcvbnius.com}
+  	LaunchConfiguration 	name:master-us-west-2a.masters.k8sdemo.zxcvbnius.com
+
+  AutoscalingGroup/nodes.k8sdemo.zxcvbnius.com
+  	MinSize             	2
+  	MaxSize             	2
+  	Subnets             	[name:us-west-2a.k8sdemo.zxcvbnius.com]
+  	Tags                	{k8s.io/cluster-autoscaler/node-template/label/kops.k8s.io/instancegroup: nodes, k8s.io/role/node: 1, Name: nodes.k8sdemo.zxcvbnius.com, KubernetesCluster: k8sdemo.zxcvbnius.com}
+  	LaunchConfiguration 	name:nodes.k8sdemo.zxcvbnius.com
+
+  DHCPOptions/k8sdemo.zxcvbnius.com
+  	DomainName          	us-west-2.compute.internal
+  	DomainNameServers   	AmazonProvidedDNS
+
+  EBSVolume/a.etcd-events.k8sdemo.zxcvbnius.com
+  	AvailabilityZone    	us-west-2a
+  	VolumeType          	gp2
+  	SizeGB              	20
+  	Encrypted           	false
+  	Tags                	{k8s.io/etcd/events: a/a, k8s.io/role/master: 1, Name: a.etcd-events.k8sdemo.zxcvbnius.com, KubernetesCluster: k8sdemo.zxcvbnius.com}
+
+  EBSVolume/a.etcd-main.k8sdemo.zxcvbnius.com
+  	AvailabilityZone    	us-west-2a
+  	VolumeType          	gp2
+  	SizeGB              	20
+  	Encrypted           	false
+  	Tags                	{k8s.io/etcd/main: a/a, k8s.io/role/master: 1, Name: a.etcd-main.k8sdemo.zxcvbnius.com, KubernetesCluster: k8sdemo.zxcvbnius.com}
+
+  IAMInstanceProfile/masters.k8sdemo.zxcvbnius.com
+
+  IAMInstanceProfile/nodes.k8sdemo.zxcvbnius.com
+
+  IAMInstanceProfileRole/masters.k8sdemo.zxcvbnius.com
+  	InstanceProfile     	name:masters.k8sdemo.zxcvbnius.com id:masters.k8sdemo.zxcvbnius.com
+  	Role                	name:masters.k8sdemo.zxcvbnius.com
+
+  IAMInstanceProfileRole/nodes.k8sdemo.zxcvbnius.com
+  	InstanceProfile     	name:nodes.k8sdemo.zxcvbnius.com id:nodes.k8sdemo.zxcvbnius.com
+  	Role                	name:nodes.k8sdemo.zxcvbnius.com
+
+  IAMRole/masters.k8sdemo.zxcvbnius.com
+  	ExportWithID        	masters
+
+  IAMRole/nodes.k8sdemo.zxcvbnius.com
+  	ExportWithID        	nodes
+
+  IAMRolePolicy/masters.k8sdemo.zxcvbnius.com
+  	Role                	name:masters.k8sdemo.zxcvbnius.com
+
+  IAMRolePolicy/nodes.k8sdemo.zxcvbnius.com
+  	Role                	name:nodes.k8sdemo.zxcvbnius.com
+
+  InternetGateway/k8sdemo.zxcvbnius.com
+  	VPC                 	name:k8sdemo.zxcvbnius.com
+  	Shared              	false
+
+  Keypair/apiserver-aggregator
+  	Subject             	cn=aggregator
+  	Type                	client
+  	Signer              	name:apiserver-aggregator-ca id:cn=apiserver-aggregator-ca
+
+  Keypair/apiserver-aggregator-ca
+  	Subject             	cn=apiserver-aggregator-ca
+  	Type                	ca
+
+  Keypair/apiserver-proxy-client
+  	Subject             	cn=apiserver-proxy-client
+  	Type                	client
+  	Signer              	name:ca id:cn=kubernetes
+
+  Keypair/ca
+  	Subject             	cn=kubernetes
+  	Type                	ca
+
+  Keypair/kops
+  	Subject             	o=system:masters,cn=kops
+  	Type                	client
+  	Signer              	name:ca id:cn=kubernetes
+
+  Keypair/kube-controller-manager
+  	Subject             	cn=system:kube-controller-manager
+  	Type                	client
+  	Signer              	name:ca id:cn=kubernetes
+
+  Keypair/kube-proxy
+  	Subject             	cn=system:kube-proxy
+  	Type                	client
+  	Signer              	name:ca id:cn=kubernetes
+
+  Keypair/kube-scheduler
+  	Subject             	cn=system:kube-scheduler
+  	Type                	client
+  	Signer              	name:ca id:cn=kubernetes
+
+  Keypair/kubecfg
+  	Subject             	o=system:masters,cn=kubecfg
+  	Type                	client
+  	Signer              	name:ca id:cn=kubernetes
+
+  Keypair/kubelet
+  	Subject             	o=system:nodes,cn=kubelet
+  	Type                	client
+  	Signer              	name:ca id:cn=kubernetes
+
+  Keypair/kubelet-api
+  	Subject             	cn=kubelet-api
+  	Type                	client
+  	Signer              	name:ca id:cn=kubernetes
+
+  Keypair/master
+  	Subject             	cn=kubernetes-master
+  	Type                	server
+  	AlternateNames      	[100.64.0.1, 127.0.0.1, api.internal.k8sdemo.zxcvbnius.com, api.k8sdemo.zxcvbnius.com, kubernetes, kubernetes.default, kubernetes.default.svc, kubernetes.default.svc.cluster.local]
+  	Signer              	name:ca id:cn=kubernetes
+
+  LaunchConfiguration/master-us-west-2a.masters.k8sdemo.zxcvbnius.com
+  	ImageID             	kope.io/k8s-1.8-debian-jessie-amd64-hvm-ebs-2017-12-02
+  	InstanceType        	t2.micro
+  	SSHKey              	name:kubernetes.k8sdemo.zxcvbnius.com-b6:36:3f:43:77:9e:09:ec:b5:05:19:93:53:46:da:f6 id:kubernetes.k8sdemo.zxcvbnius.com-b6:36:3f:43:77:9e:09:ec:b5:05:19:93:53:46:da:f6
+  	SecurityGroups      	[name:masters.k8sdemo.zxcvbnius.com]
+  	AssociatePublicIP   	true
+  	IAMInstanceProfile  	name:masters.k8sdemo.zxcvbnius.com id:masters.k8sdemo.zxcvbnius.com
+  	RootVolumeSize      	64
+  	RootVolumeType      	gp2
+  	SpotPrice
+
+  LaunchConfiguration/nodes.k8sdemo.zxcvbnius.com
+  	ImageID             	kope.io/k8s-1.8-debian-jessie-amd64-hvm-ebs-2017-12-02
+  	InstanceType        	t2.micro
+  	SSHKey              	name:kubernetes.k8sdemo.zxcvbnius.com-b6:36:3f:43:77:9e:09:ec:b5:05:19:93:53:46:da:f6 id:kubernetes.k8sdemo.zxcvbnius.com-b6:36:3f:43:77:9e:09:ec:b5:05:19:93:53:46:da:f6
+  	SecurityGroups      	[name:nodes.k8sdemo.zxcvbnius.com]
+  	AssociatePublicIP   	true
+  	IAMInstanceProfile  	name:nodes.k8sdemo.zxcvbnius.com id:nodes.k8sdemo.zxcvbnius.com
+  	RootVolumeSize      	128
+  	RootVolumeType      	gp2
+  	SpotPrice
+
+  ManagedFile/k8sdemo.zxcvbnius.com-addons-bootstrap
+  	Location            	addons/bootstrap-channel.yaml
+
+  ManagedFile/k8sdemo.zxcvbnius.com-addons-core.addons.k8s.io
+  	Location            	addons/core.addons.k8s.io/v1.4.0.yaml
+
+  ManagedFile/k8sdemo.zxcvbnius.com-addons-dns-controller.addons.k8s.io-k8s-1.6
+  	Location            	addons/dns-controller.addons.k8s.io/k8s-1.6.yaml
+
+  ManagedFile/k8sdemo.zxcvbnius.com-addons-dns-controller.addons.k8s.io-pre-k8s-1.6
+  	Location            	addons/dns-controller.addons.k8s.io/pre-k8s-1.6.yaml
+
+  ManagedFile/k8sdemo.zxcvbnius.com-addons-kube-dns.addons.k8s.io-k8s-1.6
+  	Location            	addons/kube-dns.addons.k8s.io/k8s-1.6.yaml
+
+  ManagedFile/k8sdemo.zxcvbnius.com-addons-kube-dns.addons.k8s.io-pre-k8s-1.6
+  	Location            	addons/kube-dns.addons.k8s.io/pre-k8s-1.6.yaml
+
+  ManagedFile/k8sdemo.zxcvbnius.com-addons-limit-range.addons.k8s.io
+  	Location            	addons/limit-range.addons.k8s.io/v1.5.0.yaml
+
+  ManagedFile/k8sdemo.zxcvbnius.com-addons-rbac.addons.k8s.io-k8s-1.8
+  	Location            	addons/rbac.addons.k8s.io/k8s-1.8.yaml
+
+  ManagedFile/k8sdemo.zxcvbnius.com-addons-storage-aws.addons.k8s.io-v1.6.0
+  	Location            	addons/storage-aws.addons.k8s.io/v1.6.0.yaml
+
+  ManagedFile/k8sdemo.zxcvbnius.com-addons-storage-aws.addons.k8s.io-v1.7.0
+  	Location            	addons/storage-aws.addons.k8s.io/v1.7.0.yaml
+
+  Route/0.0.0.0/0
+  	RouteTable          	name:k8sdemo.zxcvbnius.com
+  	CIDR                	0.0.0.0/0
+  	InternetGateway     	name:k8sdemo.zxcvbnius.com
+
+  RouteTable/k8sdemo.zxcvbnius.com
+  	VPC                 	name:k8sdemo.zxcvbnius.com
+
+  RouteTableAssociation/us-west-2a.k8sdemo.zxcvbnius.com
+  	RouteTable          	name:k8sdemo.zxcvbnius.com
+  	Subnet              	name:us-west-2a.k8sdemo.zxcvbnius.com
+
+  SSHKey/kubernetes.k8sdemo.zxcvbnius.com-b6:36:3f:43:77:9e:09:ec:b5:05:19:93:53:46:da:f6
+  	KeyFingerprint      	7c:fe:d7:91:4d:22:64:1f:f2:94:ee:88:b3:53:4b:67
+
+  Secret/admin
+
+  Secret/kube
+
+  Secret/kube-proxy
+
+  Secret/kubelet
+
+  Secret/system:controller_manager
+
+  Secret/system:dns
+
+  Secret/system:logging
+
+  Secret/system:monitoring
+
+  Secret/system:scheduler
+
+  SecurityGroup/masters.k8sdemo.zxcvbnius.com
+  	Description         	Security group for masters
+  	VPC                 	name:k8sdemo.zxcvbnius.com
+  	RemoveExtraRules    	[port=22, port=443, port=2380, port=2381, port=4001, port=4002, port=4789, port=179]
+
+  SecurityGroup/nodes.k8sdemo.zxcvbnius.com
+  	Description         	Security group for nodes
+  	VPC                 	name:k8sdemo.zxcvbnius.com
+  	RemoveExtraRules    	[port=22]
+
+  SecurityGroupRule/all-master-to-master
+  	SecurityGroup       	name:masters.k8sdemo.zxcvbnius.com
+  	SourceGroup         	name:masters.k8sdemo.zxcvbnius.com
+
+  SecurityGroupRule/all-master-to-node
+  	SecurityGroup       	name:nodes.k8sdemo.zxcvbnius.com
+  	SourceGroup         	name:masters.k8sdemo.zxcvbnius.com
+
+  SecurityGroupRule/all-node-to-node
+  	SecurityGroup       	name:nodes.k8sdemo.zxcvbnius.com
+  	SourceGroup         	name:nodes.k8sdemo.zxcvbnius.com
+
+  SecurityGroupRule/https-external-to-master-0.0.0.0/0
+  	SecurityGroup       	name:masters.k8sdemo.zxcvbnius.com
+  	CIDR                	0.0.0.0/0
+  	Protocol            	tcp
+  	FromPort            	443
+  	ToPort              	443
+
+  SecurityGroupRule/master-egress
+  	SecurityGroup       	name:masters.k8sdemo.zxcvbnius.com
+  	CIDR                	0.0.0.0/0
+  	Egress              	true
+
+  SecurityGroupRule/node-egress
+  	SecurityGroup       	name:nodes.k8sdemo.zxcvbnius.com
+  	CIDR                	0.0.0.0/0
+  	Egress              	true
+
+  SecurityGroupRule/node-to-master-tcp-1-2379
+  	SecurityGroup       	name:masters.k8sdemo.zxcvbnius.com
+  	Protocol            	tcp
+  	FromPort            	1
+  	ToPort              	2379
+  	SourceGroup         	name:nodes.k8sdemo.zxcvbnius.com
+
+  SecurityGroupRule/node-to-master-tcp-2382-4000
+  	SecurityGroup       	name:masters.k8sdemo.zxcvbnius.com
+  	Protocol            	tcp
+  	FromPort            	2382
+  	ToPort              	4000
+  	SourceGroup         	name:nodes.k8sdemo.zxcvbnius.com
+
+  SecurityGroupRule/node-to-master-tcp-4003-65535
+  	SecurityGroup       	name:masters.k8sdemo.zxcvbnius.com
+  	Protocol            	tcp
+  	FromPort            	4003
+  	ToPort              	65535
+  	SourceGroup         	name:nodes.k8sdemo.zxcvbnius.com
+
+  SecurityGroupRule/node-to-master-udp-1-65535
+  	SecurityGroup       	name:masters.k8sdemo.zxcvbnius.com
+  	Protocol            	udp
+  	FromPort            	1
+  	ToPort              	65535
+  	SourceGroup         	name:nodes.k8sdemo.zxcvbnius.com
+
+  SecurityGroupRule/ssh-external-to-master-0.0.0.0/0
+  	SecurityGroup       	name:masters.k8sdemo.zxcvbnius.com
+  	CIDR                	0.0.0.0/0
+  	Protocol            	tcp
+  	FromPort            	22
+  	ToPort              	22
+
+  SecurityGroupRule/ssh-external-to-node-0.0.0.0/0
+  	SecurityGroup       	name:nodes.k8sdemo.zxcvbnius.com
+  	CIDR                	0.0.0.0/0
+  	Protocol            	tcp
+  	FromPort            	22
+  	ToPort              	22
+
+  Subnet/us-west-2a.k8sdemo.zxcvbnius.com
+  	VPC                 	name:k8sdemo.zxcvbnius.com
+  	AvailabilityZone    	us-west-2a
+  	CIDR                	172.20.32.0/19
+  	Shared              	false
+  	Tags                	{KubernetesCluster: k8sdemo.zxcvbnius.com, kubernetes.io/cluster/k8sdemo.zxcvbnius.com: owned, kubernetes.io/role/elb: 1, Name: us-west-2a.k8sdemo.zxcvbnius.com}
+
+  VPC/k8sdemo.zxcvbnius.com
+  	CIDR                	172.20.0.0/16
+  	EnableDNSHostnames  	true
+  	EnableDNSSupport    	true
+  	Shared              	false
+  	Tags                	{Name: k8sdemo.zxcvbnius.com, KubernetesCluster: k8sdemo.zxcvbnius.com, kubernetes.io/cluster/k8sdemo.zxcvbnius.com: owned}
+
+  VPCDHCPOptionsAssociation/k8sdemo.zxcvbnius.com
+  	VPC                 	name:k8sdemo.zxcvbnius.com
+  	DHCPOptions         	name:k8sdemo.zxcvbnius.com
+
+Must specify --yes to apply changes
+
+Cluster configuration has been created.
+
+Suggestions:
+ * list clusters with: kops get cluster
+ * edit this cluster with: kops edit cluster k8sdemo.zxcvbnius.com
+ * edit your node instance group: kops edit ig --name=k8sdemo.zxcvbnius.com nodes
+ * edit your master instance group: kops edit ig --name=k8sdemo.zxcvbnius.com master-us-west-2a
+
+Finally configure your cluster with: kops update cluster k8sdemo.zxcvbnius.com --yes
