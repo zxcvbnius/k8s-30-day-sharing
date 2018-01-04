@@ -1,0 +1,64 @@
+W0104 00:56:19.972449    4264 aws.go:2036] (new) cluster tag not found 
+on route-table:rtb-77564f0e
+W0104 00:56:26.419773    4264 aws.go:2036] (new) cluster tag not found 
+on route-table:rtb-77564f0e
+TYPE			NAME											
+ID
+autoscaling-config	
+master-us-west-2a.masters.k8sdemo.zxcvbnius.com-20180103224307				
+master-us-west-2a.masters.k8sdemo.zxcvbnius.com-20180103224307
+autoscaling-config	nodes.k8sdemo.zxcvbnius.com-20180103224307						
+nodes.k8sdemo.zxcvbnius.com-20180103224307
+autoscaling-group	master-us-west-2a.masters.k8sdemo.zxcvbnius.com						
+master-us-west-2a.masters.k8sdemo.zxcvbnius.com
+autoscaling-group	nodes.k8sdemo.zxcvbnius.com								
+nodes.k8sdemo.zxcvbnius.com
+dhcp-options		k8sdemo.zxcvbnius.com									
+dopt-5a997c23
+iam-instance-profile	masters.k8sdemo.zxcvbnius.com								
+masters.k8sdemo.zxcvbnius.com
+iam-instance-profile	nodes.k8sdemo.zxcvbnius.com								
+nodes.k8sdemo.zxcvbnius.com
+iam-role		masters.k8sdemo.zxcvbnius.com								
+masters.k8sdemo.zxcvbnius.com
+iam-role		nodes.k8sdemo.zxcvbnius.com								
+nodes.k8sdemo.zxcvbnius.com
+instance		master-us-west-2a.masters.k8sdemo.zxcvbnius.com						
+i-06dfd2b0fdfac9fd5
+instance		nodes.k8sdemo.zxcvbnius.com								
+i-0bef5a5ad6f3a4a3f
+instance		nodes.k8sdemo.zxcvbnius.com								
+i-0ffc83380d65028f7
+internet-gateway	k8sdemo.zxcvbnius.com									
+igw-de22e4b8
+keypair			
+kubernetes.k8sdemo.zxcvbnius.com-b6:36:3f:43:77:9e:09:ec:b5:05:19:93:53:46:da:f6	
+kubernetes.k8sdemo.zxcvbnius.com-b6:36:3f:43:77:9e:09:ec:b5:05:19:93:53:46:da:f6
+load-balancer													
+ab7f4d553f0e411e7abc0025e9dcbb8a
+route-table		k8sdemo.zxcvbnius.com									
+rtb-77564f0e
+route53-record		api.internal.k8sdemo.zxcvbnius.com.							
+ZSF9HRD0EPJG9/api.internal.k8sdemo.zxcvbnius.com.
+route53-record		api.k8sdemo.zxcvbnius.com.								
+ZSF9HRD0EPJG9/api.k8sdemo.zxcvbnius.com.
+route53-record		etcd-a.internal.k8sdemo.zxcvbnius.com.							
+ZSF9HRD0EPJG9/etcd-a.internal.k8sdemo.zxcvbnius.com.
+route53-record		etcd-events-a.internal.k8sdemo.zxcvbnius.com.						
+ZSF9HRD0EPJG9/etcd-events-a.internal.k8sdemo.zxcvbnius.com.
+security-group													
+sg-8d0d5df1
+security-group		masters.k8sdemo.zxcvbnius.com								
+sg-b7c495cb
+security-group		nodes.k8sdemo.zxcvbnius.com								
+sg-62c7961e
+subnet			us-west-2a.k8sdemo.zxcvbnius.com							
+subnet-401b1726
+volume			a.etcd-events.k8sdemo.zxcvbnius.com							
+vol-075d69aec0df10140
+volume			a.etcd-main.k8sdemo.zxcvbnius.com							
+vol-0cade08a7df472e40
+vpc			k8sdemo.zxcvbnius.com									
+vpc-1b905c62
+
+Must specify --yes to delete cluster
