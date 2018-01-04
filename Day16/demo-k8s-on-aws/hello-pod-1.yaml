@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-pod-1
+  labels:
+    app: webserver
+    tier: backend
+spec:
+  containers:
+  - name: pod-demo
+    image: zxcvbnius/docker-demo
+    ports:
+    - name: hello-pod-port
+      containerPort: 3000
