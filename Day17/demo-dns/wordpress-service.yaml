@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wordpress-service
+spec:
+  ports:
+  - port: 3000
+    nodePort: 30300
+    protocol: TCP
+    targetPort: wordpress-port
+  selector:
+    app: wordpress
+  type: NodePort
+
