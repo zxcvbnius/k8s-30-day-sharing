@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: wordpress
+  lablels:
+    app: wordpress
+spec:
+  containers:
+  - name: wordpress
+    image: wordpress:4-php7.0
+    ports: 
+    - name: wordpress-port
+      containerPort: 80
+    env:
+    - name: WORDPRESS_DB_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: mysql-secret
+          key: db-root-password
+     - name: WORDPRESS_DB_HOST
+       value: mysql-server-service
