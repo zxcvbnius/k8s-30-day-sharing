@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: apiserver
+  labels:
+    app: webserver
+    tier: backend
+spec:
+  containers:
+  - name: nodejs-app
+    image: zxcvbnius/docker-demo
+    ports:
+    - containerPort: 3000
+  - name: nginx
+    image: nginx:1.13
+    ports:
+    - containerPort: 80
+    volumeMounts:
+    - name: nginx-conf-volume
+      mountPath: /etc/nginx/conf.d
+  volumes:
+  - name: nginx-conf-volume
+    configMap:
+      name: nginx-conf
+      items:
+      - key: my-nginx.conf
+        path: my-nginx.conf
