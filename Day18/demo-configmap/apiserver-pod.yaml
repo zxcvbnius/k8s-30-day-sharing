@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: apiserver
+  labels:
+    app: webserver
+    tier: backend
+spec:
+  containers:
+  - name: nodejs-app
+    image: zxcvbnius/docker-demo
+    ports:
+    - name: apiserver-port
+      containerPort: 3000
