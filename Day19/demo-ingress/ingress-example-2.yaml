@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: example-2
+spec:
+  rules:
+  - host: helloworld-v1.example.com
+    http:
+      paths:
+      - path: /
+        backend: 
+          serviceName: hellworld-v1
+          servicePort: 80
+  - host: helloworld-v2.example.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: helloworld-v2
+          servicePort: 80
