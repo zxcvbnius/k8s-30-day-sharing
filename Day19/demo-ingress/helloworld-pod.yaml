@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: helloworld-pod
   labels:
-    app: webserver
+    app: helloworld-pod
     tier: backend
 spec:
   containers:

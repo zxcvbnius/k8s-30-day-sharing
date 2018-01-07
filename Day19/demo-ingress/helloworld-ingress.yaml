@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: helloworld-ingress
+  namespace: default
+spec:
+  rules:
+  - host: helloworld.example.com
+    http:
+      paths:
+      - backend:
+          serviceName: helloworld-service
+          servicePort: 3000
