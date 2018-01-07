@@ -9,6 +9,7 @@ spec:
     volumeMounts:
     - mountPath: /tmp
       name: tmp-volume
+    imagePullPolicy: Always
   volumes:
   - name: tmp-volume
     hostPath: 

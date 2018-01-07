@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: apiserver
+spec:
+  containers:
+  - name: apiserver
+    image: zxcvbnius/docker-demo
+    ports:
+      - name: api-port
+        containerPort: 3000
+    volumeMounts:
+      - name: nfs-volumes
+        mountPath: /tmp
+  volumes:
+  - name: nfs-volumes
+    nfs:
+     server: {YOUR_NFS_SERVER_URL}
+     path: /
