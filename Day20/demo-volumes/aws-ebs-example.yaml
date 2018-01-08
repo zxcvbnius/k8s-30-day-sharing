@@ -11,7 +11,7 @@ spec:
         containerPort: 3000
     volumeMounts:
       - name: aws-ebs-volumes
-        mountPath: /myvol
+        mountPath: /tmp
   volumes:
   - name: aws-ebs-volumes
     awsElasticBlockStore:
