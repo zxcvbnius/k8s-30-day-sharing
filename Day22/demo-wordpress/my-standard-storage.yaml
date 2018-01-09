@@ -5,5 +5,5 @@ metadata:
 provisioner: kubernetes.io/aws-ebs
 parameters:
   type: gp2
-  zone: us-west-2
+  zone: us-west-2a
 reclaimPolicy: Delete
