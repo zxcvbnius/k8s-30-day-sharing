@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: apiserver
+  labels:
+    app: apiserver
+    tier: backend
+spec:
+  containers:
+  - name: my-pod
+    image: zxcvbnius/docker-demo
+    ports:
+    - containerPort: 3000
+    volumeMounts:
+    - name: my-pvc 
+      mountPath: "/tmp"
+  volumes:
+  - name: my-pvc
+    persistentVolumeClaim:
+      claimName: myclaim
