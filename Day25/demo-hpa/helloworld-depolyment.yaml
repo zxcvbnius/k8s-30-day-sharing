@@ -1,0 +1,22 @@
+apiVersion: apps/v1beta2 
+kind: Deployment
+metadata:
+  name: hello-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: helloworld-deployment
+  template:
+    metadata:
+      labels:
+        app: helloworld-deployment
+    spec:
+      containers:
+      - name: my-pod
+        image: zxcvbnius/docker-demo:latest
+        ports:
+        - containerPort: 3000
+        resources:
+          requests:
+            cpu: 300m
