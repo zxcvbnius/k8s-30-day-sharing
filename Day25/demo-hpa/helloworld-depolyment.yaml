@@ -1,16 +1,16 @@
 apiVersion: apps/v1beta2 
 kind: Deployment
 metadata:
-  name: hello-deployment
+  name: helloworld-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: helloworld-deployment
+      app: helloworld-pod
   template:
     metadata:
       labels:
-        app: helloworld-deployment
+        app: helloworld-pod
     spec:
       containers:
       - name: my-pod
