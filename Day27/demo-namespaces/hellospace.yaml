@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: hellospace
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: compute-quotas
+  namespace: hellospace
+spec:
+  hard:
+    requests.cpu: "1"
+    requests.memory: 1Gi
+    limits.cpu: "1"
+    requests.memory: 10Gi
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: object-quotas
+  namespace: hellospace
+spec:
+  hard:
+    services: "2"
+    services.loadbalancers: "1"
+    secrets: "1"
+    configmaps: "1"
+    replicationcontrollers: "10"
+
