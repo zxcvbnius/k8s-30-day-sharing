@@ -1,0 +1,19 @@
+apiVersion: apps/v1beta2 
+kind: Deployment
+metadata:
+  name: helloworld-deployment-2
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: helloworld-pod-2
+  template:
+    metadata:
+      labels:
+        app: helloworld-pod-2
+    spec:
+      containers:
+      - name: my-pod
+        image: zxcvbnius/docker-demo:latest
+        ports:
+        - containerPort: 3000
