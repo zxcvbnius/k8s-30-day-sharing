@@ -37,7 +37,7 @@
 
 ![docker-hub-welcome-page](https://github.com/zxcvbnius/k8s-30-day-sharing/blob/master/Day04/docker-hub-welcome-page.png?raw=true)
 
-接著回到terminal上，輸入`docker loing`指令，登入剛剛申請的帳號。由於Docker Hub是官方提供，若是docker沒有特別指定其他的Docker Registry，登入之後的Registry會直接連結到Docker Hub。
+接著回到terminal上，輸入`docker login`指令，登入剛剛申請的帳號。由於Docker Hub是官方提供，若是docker沒有特別指定其他的Docker Registry，登入之後的Registry會直接連結到Docker Hub。
 
 ![docker-loing](https://github.com/zxcvbnius/k8s-30-day-sharing/blob/master/Day04/docker-loing.png?raw=true)
 
