@@ -201,7 +201,7 @@ $ kubectl expose pod <pod> --port=<port> --name=<service-name>
 ### 將某一Pod中指定的port number mapping到本機端的某一特定port number
 
 ```
-$ kubectl port-forward <port> <external-port>:<pod-port>
+$ kubectl port-forward <pod> <external-port>:<pod-port>
 ```
 
 ### 當一個container起來之後，有時希望能進到container內部去看logs，可以使用`kubectl attach`這個指令
