@@ -206,7 +206,7 @@ pod "my-pod-with-mounting-secret" created
 透過以上兩種方式，我們便能在 [Pods](https://kubernetes.io/docs/concepts/workloads/pods/pod/) 中存取 Secret 物件。
 
 # 總結
-當我們有些敏感資料需要傳入 Kubernetes 時，使用 [Secret](https://kubernetes.io/docs/concepts/configuration/secret) 是個不錯的選擇 。然而，需要留意的是，一旦建立 [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) 物件，其他人可以也可以在 Kubernetes Cluster 上存取 [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) 中的敏感資料。因此，我們需要搭配 [Service Account](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) 來限制其他人的存取權限，在之後 [[Day 28] 如何在 k8s 管理不同的專案 - Namespaces]() 也會與大家分享如何設置。我們明年見囉～ :tada:
+當我們有些敏感資料需要傳入 Kubernetes 時，使用 [Secret](https://kubernetes.io/docs/concepts/configuration/secret) 是個不錯的選擇 。然而，需要留意的是，一旦建立 [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) 物件，其他人可以也可以在 Kubernetes Cluster 上存取 [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) 中的敏感資料。因此，我們需要搭配 [Service Account](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) 來限制其他人的存取權限，在之後 [[Day 28] 如何在 k8s 管理不同的專案 - Namespaces](https://github.com/zxcvbnius/k8s-30-day-sharing/tree/master/Day28) 也會與大家分享如何設置。我們明年見囉～ :tada:
 
 
 # Q&A
