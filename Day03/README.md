@@ -57,7 +57,7 @@ ubuntu
 若還沒有，輸入以下指令(如果user不是ubuntu，記得需要改成目前登入的username)
 
 ```
-$ sudo usermod -G docker ubuntu
+$ sudo usermod -G docker -a ubuntu
 ```
 執行行完上述指令之後，記得`重新登入`，再次查看
 
